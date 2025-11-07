@@ -1,8 +1,6 @@
 *This project has been created as part of the 42 curriculum by <Tcillier>*
 
-[![42](https://img.shields.io/badge/42-Project-blue)](https://www.42.fr/)  
-[![Build Status](https://github.com/spimky04700/Printf/actions/workflows/build.yml/badge.svg)](https://github.com/spimky04700/Printf/actions)  
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![42](https://img.shields.io/badge/42-Project-blue)](https://www.42.fr/)
 
 ## Description
 
