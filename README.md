@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <Tcillier>*
+*This project has been created as part of the 42 curriculum by Tcillier*
 
 [![42](https://img.shields.io/badge/42-Project-blue)](https://www.42.fr/)
 
