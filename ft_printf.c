@@ -12,33 +12,32 @@
 
 #include "ft_printf.h"
 
-int ft_printf(const char *fmt, ...)
+int ft_printf(const char *format, ...)
 {
-    va_list ap; // Liste d’arguments variables
-    int total; // Nombre total de caractères imprimés
+	va_list args;
+	int total;
 
-
-if (!fmt) // Si format NULL → erreur
-    return (-1);
-va_start(ap, fmt); // Démarre la lecture des arguments
-total = 0; // Initialisation du compteur
-while (*fmt) // Boucle sur toute la chaîne de format
-{
-    if (*fmt == '%') // Si on rencontre un spécificateur
-    {
-        fmt++; // Passe au caractère suivant
-        if (!*fmt) // Fin de chaîne prématurée
-            break ;
-        total += do_conversion(*fmt, &ap); // Gère la conversion
-        fmt++; // Passe au prochain caractère
-    }
-    else // Sinon, caractère normal
-    {
-        write(1, fmt, 1); // Affiche-le
-        total++; // Incrémente le compteur
-        fmt++; // Passe au suivant
-    }
-}
-va_end(ap); // Termine la lecture d’arguments
-return (total); // Retourne le total affiché
+	if (!format)
+		return (-1);
+	va_start(args, format);
+	total = 0;
+	while (*format)
+	{
+		if (*format == '%')
+		{
+			format++;
+			if (!*format)
+				break ;
+			total += do_conversion(*format, &args);
+			format++;
+		}
+		else
+		{
+			write(1, format, 1);
+			total++;
+			format++;
+		}
+	}
+	va_end(args);
+	return (total);
 }
